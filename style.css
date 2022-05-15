@@ -13,13 +13,12 @@ body {
 
 #board {
 	position: relative;
-	  
-	height: 110px;
+	
 	margin: 0 auto 50px auto;
 	
 	display: flex;
 	justify-content: center;
-	gap: 8px;
+	gap: 5px;
 }
 
 .bottle {
@@ -30,9 +29,9 @@ body {
 
 	font-size: 1e-10em;
 
-	min-width: 31px;
+	min-width: 36px;
 	
-	padding: 0 1px 1px 1px;
+	padding: 5px 1px 1px 1px;
 	
 	display: flex;
 	flex-direction: column-reverse;
@@ -41,15 +40,15 @@ body {
 }
 
 .ball {
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
 	border: 2px solid rgba(0, 0, 0, 0.1);
-	border-radius: 12.5px;
+	border-radius: 15px;
 }
 
 .focus {
 	position: absolute;
-	top: -30px;
+	top: -35px;
 }
 
 .buttons_panel {
@@ -96,7 +95,6 @@ body {
 
 @media (min-width: 480px) {
 	#board {
-		height: 210px;
 		gap: 8px;
 	}
 	

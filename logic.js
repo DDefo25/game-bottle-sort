@@ -39,7 +39,16 @@ function clearStartConditions() {
 function createRandom(board) {
 	for (i = 0; i < bottles; i += 1) {
 		board[i] = new Array();
+		let minColors = new Array();
 		let isColor;
+
+		function minColorArray(minColorNumber, colorsQuantity) {
+			minColors = [];
+			for (let [n, num] of colorsQuantity.entries()) {
+				if (num === minColorNumber) minColors.push(colors[n]);
+			};
+		};
+		
 		for (let j = 0; j < maxBallsInBottle; j += 1) {
 			if (i < 1) {
 				isColor = colors[randomIndex(colors)];
@@ -50,15 +59,17 @@ function createRandom(board) {
 			} else if (i >= 1 && i < (bottles - bottlesEmpty)) {
 				let colorsQuantity = colors.map(color => board.flat().filter(ball => ball === color).length);
 				let minColorNumber = Math.min(...colorsQuantity);
-				let minColors = [];
-				for (let [n, num] of colorsQuantity.entries()) {
-					if (num === minColorNumber) minColors.push(colors[n]);
+				minColorArray(minColorNumber, colorsQuantity);
+				
+				let minColorIncludesInBottle = minColors.every(color => board[i].includes(color));
+				while (minColorIncludesInBottle) {
+					minColorArray(minColorNumber++, colorsQuantity);
 				};
-			
-				for (let n = 0; n < minColors.length; n += 1) {
+				
+				isColor = minColors[randomIndex(minColors)];
+				while (board[i].includes(isColor)) {
 					isColor = minColors[randomIndex(minColors)];
-					if (board[i].includes(isColor)) continue;
-				};				
+				};			
 				board[i].push(isColor)
 			};
 		};
