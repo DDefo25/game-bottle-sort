@@ -2,9 +2,10 @@ const RED = '#FA3C4C';
 const GREEN = '#64FA87';
 const BLUE = '#3953FA';
 const PURPLE = '#992AFA';
-const YELLOW = '#FAD457';
+const YELLOW = '#FAF246';
+const ORANGE = '#FAA646';
 
-const colors = [RED, GREEN, BLUE, PURPLE, YELLOW];
+const colors = [RED, GREEN, BLUE, PURPLE, YELLOW, ORANGE];
 
 let board = [];
 
