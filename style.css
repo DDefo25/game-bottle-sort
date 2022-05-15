@@ -29,7 +29,7 @@ body {
 
 	font-size: 1e-10em;
 
-	min-width: 36px;
+	min-width: 42px;
 	
 	padding: 5px 1px 1px 1px;
 	
@@ -40,15 +40,15 @@ body {
 }
 
 .ball {
-	width: 30px;
-	height: 30px;
+	width: 36px;
+	height: 36px;
 	border: 2px solid rgba(0, 0, 0, 0.1);
-	border-radius: 15px;
+	border-radius: 17px;
 }
 
 .focus {
 	position: absolute;
-	top: -35px;
+	top: -41px;
 }
 
 .buttons_panel {
@@ -110,5 +110,9 @@ body {
 
 	.focus {
 		top: -55px;
+	}
+
+	#modal_window {
+		width: 30%;
 	}
 }
