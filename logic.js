@@ -4,13 +4,17 @@ const BLUE = '#3953FA';
 const PURPLE = '#992AFA';
 const YELLOW = '#FAF246';
 const ORANGE = '#FAA646';
+const LIGTHBLUE = '#6BECF2';
+const PINK = '#F528E7';
 
-const colors = [RED, GREEN, BLUE, PURPLE, YELLOW, ORANGE];
+const colorsAll = [RED, GREEN, BLUE, PURPLE, YELLOW, ORANGE, LIGTHBLUE, PINK]
 
+let colors = [];
 let board = [];
+let colorsInGame = 5;
 
 const bottlesEmpty = 2;
-const bottles = colors.length + bottlesEmpty;
+const bottles = colorsInGame + bottlesEmpty;
 const maxBallsInBottle = 4;
 const balls = (bottles - bottlesEmpty) * maxBallsInBottle;
 
@@ -18,7 +22,8 @@ const buffer = {color: '', bottleIndex: 0};
 
 
 function startGame() {
-	clearStartConditions()
+	clearStartConditions();
+	colorChoosing(colorsAll);
 	createRandom(board);
 	renderBoard(board);
 }
@@ -34,6 +39,21 @@ function randomIndex(array) {
 function clearStartConditions() {
 	board = [];
 	clean(buffer);
+	colors = [];
+};
+
+function colorChoosing(colorsAll) {
+	let color;
+	for (let i = 0; i < colorsInGame; i += 1) {
+		color = colorsAll[randomIndex(colorsAll)];
+		console.log(color);
+		console.log(colors);
+		while (colors.includes(color)) {
+			color = colorsAll[randomIndex(colorsAll)];
+		};
+		console.log(color);
+		colors.push(color);
+	};
 };
 
 function createRandom(board) {
@@ -107,7 +127,6 @@ function moveBall(bottle) {
 	board[buffer.bottleIndex].pop();
 	clean(buffer);
 };
-
 
 function click(bottleIndex) {
 	let bottle = board[bottleIndex];

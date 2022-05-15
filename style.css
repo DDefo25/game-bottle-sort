@@ -13,6 +13,7 @@ body {
 
 #board {
 	position: relative;
+	width: 100%;
 	
 	margin: 0 auto 50px auto;
 	
@@ -30,6 +31,7 @@ body {
 	font-size: 1e-10em;
 
 	min-width: 42px;
+	min-height: 154px;
 	
 	padding: 5px 1px 1px 1px;
 	
@@ -100,6 +102,7 @@ body {
 	
 	.bottle {
 		min-width: 56px;
+		min-height: 210px;
 	}
 	
 	.ball {
