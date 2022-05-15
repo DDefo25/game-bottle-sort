@@ -11,7 +11,7 @@ const colorsAll = [RED, GREEN, BLUE, PURPLE, YELLOW, ORANGE, LIGTHBLUE, PINK]
 
 let colors = [];
 let board = [];
-let colorsInGame = 5;
+let colorsInGame = 6;
 
 const bottlesEmpty = 2;
 const bottles = colorsInGame + bottlesEmpty;
