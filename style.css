@@ -9,6 +9,7 @@ html, body {
 
 body {
 	padding-top: 100px;
+	overflow: hidden;
 }
 
 #board {
@@ -80,6 +81,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
+
 
 #modal_window {
     position: relative;

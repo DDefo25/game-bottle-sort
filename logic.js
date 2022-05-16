@@ -11,7 +11,7 @@ const colorsAll = [RED, GREEN, BLUE, PURPLE, YELLOW, ORANGE, LIGTHBLUE, PINK]
 
 let colors = [];
 let board = [];
-let colorsInGame = 6;
+let colorsInGame = 8;
 
 const bottlesEmpty = 2;
 const bottles = colorsInGame + bottlesEmpty;
@@ -46,12 +46,9 @@ function colorChoosing(colorsAll) {
 	let color;
 	for (let i = 0; i < colorsInGame; i += 1) {
 		color = colorsAll[randomIndex(colorsAll)];
-		console.log(color);
-		console.log(colors);
 		while (colors.includes(color)) {
 			color = colorsAll[randomIndex(colorsAll)];
 		};
-		console.log(color);
 		colors.push(color);
 	};
 };
