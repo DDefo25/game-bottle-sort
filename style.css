@@ -2,11 +2,6 @@
 	box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
-	width: 100%;
-}
-
 body {
 	padding-top: 100px;
 	overflow: hidden;
@@ -14,7 +9,6 @@ body {
 
 #board {
 	position: relative;
-	width: 100%;
 	
 	margin: 0 auto 50px auto;
 	
@@ -31,8 +25,8 @@ body {
 
 	font-size: 1e-10em;
 
-	min-width: 42px;
-	min-height: 154px;
+	min-width: 34px;
+	min-height: 116px;
 	
 	padding: 5px 1px 1px 1px;
 	
@@ -43,10 +37,10 @@ body {
 }
 
 .ball {
-	width: 36px;
-	height: 36px;
+	width: 28px;
+	height: 28px;
 	border: 2px solid rgba(0, 0, 0, 0.1);
-	border-radius: 17px;
+	border-radius: 14px;
 }
 
 .focus {
